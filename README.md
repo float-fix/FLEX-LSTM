@@ -102,11 +102,11 @@ float-fix-lstm/
 │   ├── lfp_e3m4_multiplier.v   # LFP-E3M4 multiplier
 │   ├── e4m4_to_q611.v          # E4M4 → Q6.11 converter
 │   ├── lfp_mac.v               # Full LFP MAC unit
-│   ├── combinational.v         # LSTM cell (4 gates)
+│   ├── LSTM.v                  # LSTM cell (4 gates)
 │   ├── sigmoid_lut.mem         # Sigmoid LUT (384 entries)
 │   └── tanh_lut.mem            # Tanh LUT (353 entries)
 ├── sim/                        # Co-simulation testbenches
-│   ├── tb_combinational.v      # MAC unit testbench
+│   ├── TB_LSTM.v               # MAC unit testbench
 │   └── check.py                # Python–RTL co-simulation driver
 ├── training/                   # PyTorch training scripts
 │   ├── train_udpos.py
