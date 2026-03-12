@@ -113,52 +113,8 @@ float-fix-lstm/
 │   ├── train_snli.py
 │   ├── train_multi30k.py
 │   └── train_wikitext2.py
-├── synth/                      # Synthesis scripts (GPDK 45nm)
-│   └── synth.tcl
 └── README.md
 ```
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Python ≥ 3.8 with PyTorch
-- A Verilog simulator (Icarus Verilog, ModelSim, or VCS)
-- *(Optional)* Synopsys Design Compiler or Cadence Genus for synthesis
-
-### Install Python dependencies
-
-```bash
-pip install torch torchtext numpy
-```
-
-### Run the bit-exact Python golden model
-
-```bash
-cd python
-python float_fix_lstm.py --hidden 128 --seq_len 32
-```
-
-### Run RTL–Python co-simulation
-
-```bash
-cd sim
-python cosim_runner.py --num_tests 1000000
-```
-
-This drives randomized weight/input combinations through both the Python model and RTL simulation, asserting bit-exact agreement on all outputs.
-
-### Train on NLP benchmarks
-
-```bash
-# Example: WikiText-2 language modeling
-cd training
-python train_wikitext2.py --epochs 50 --batch_size 64
-```
-
-All scripts default to the same hyperparameters as the paper (see Table I).
 
 ---
 
