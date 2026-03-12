@@ -142,18 +142,7 @@ Mantissa conversion between integer and logarithmic domains uses a 1-bit correct
 
 ---
 
-## Citation
 
-If you use this work, please cite:
-
-```bibtex
-@article{floatfix_lstm,
-  title     = {An Energy--Latency--Area Optimized LSTM Architecture Using Approximate Float--Fix Representation},
-  year      = {2025},
-}
-```
-
----
 
 ## License
 
